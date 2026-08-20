@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check tag matches manifest version
+        run: |
+          TAG_REF="${GITHUB_REF_NAME}"
+          TAG_VERSION="${TAG_REF#v}"
+          MANIFEST_VERSION="$(node -p "require('./manifest.json').version")"
+
+          echo "Tag version:      ${TAG_VERSION}"
+          echo "Manifest version: ${MANIFEST_VERSION}"
+
+          if [ "${TAG_VERSION}" != "${MANIFEST_VERSION}" ]; then
+            echo "ERROR: version mismatch"
+            echo "Git tag and manifest.json version must match (e.g. v0.3.2 <-> 0.3.2)."
+            exit 1
+          fi
+
+      - name: Install web-ext
+        run: npm install --global web-ext
+
+      - name: Lint
+        run: web-ext lint
+
+      - name: Build
+        run: web-ext build --overwrite-dest
+
+      - name: Prepare release asset
+        id: asset
+        run: |
+          VERSION="$(node -p "require('./manifest.json').version")"
+          SRC="$(ls web-ext-artifacts/*.zip | head -n 1)"
+          DEST="T-Kong-${VERSION}.zip"
+          cp "${SRC}" "${DEST}"
+          echo "path=${DEST}" >> "${GITHUB_OUTPUT}"
+          echo "Prepared ${DEST} from ${SRC}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: ${{ steps.asset.outputs.path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

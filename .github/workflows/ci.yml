@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install web-ext
+        run: npm install --global web-ext
+
+      - name: Lint
+        run: web-ext lint
+
+      - name: Build
+        run: web-ext build --overwrite-dest
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: t-kong-build
+          path: web-ext-artifacts/*.zip
+          if-no-files-found: error

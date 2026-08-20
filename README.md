@@ -53,6 +53,21 @@ web-ext build
 
 成果物は `web-ext-artifacts/` に出力されます。
 
+### GitHub からのビルド / リリース
+
+`main` への push と Pull Request では GitHub Actions が `web-ext lint` と `web-ext build` を実行し、ZIP を Artifact（`t-kong-build`）として保存します。
+
+Git タグを push すると GitHub Release が作られ、`T-Kong-<version>.zip` が添付されます。  
+タグ（例: `v0.3.2`）と `manifest.json` の `version`（例: `0.3.2`）は一致させてください。
+
+```bash
+# manifest.json の version を確認してから
+git tag v0.3.2
+git push origin v0.3.2
+```
+
+AMO への提出・署名は当面手動です（CI から AMO API は呼びません）。
+
 ### 開発用の一時実行
 
 ```bash
