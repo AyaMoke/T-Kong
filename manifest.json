@@ -1,0 +1,70 @@
+{
+  "manifest_version": 3,
+  "name": "T-Kong",
+  "version": "0.3.1",
+  "description": "日経記事タイトルを端末内に保存し、楽天証券版日経テレコンでの同一記事検索を補助する非公式拡張です。",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nikkei.com/article/*"
+      ],
+      "js": [
+        "shared/settings.js",
+        "content/nikkei.js"
+      ],
+      "css": [
+        "content/nikkei.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://t21.nikkei.co.jp/*"
+      ],
+      "js": [
+        "shared/settings.js",
+        "content/telecon.js"
+      ],
+      "css": [
+        "content/telecon.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://member.rakuten-sec.co.jp/app/smt_info_jp_nikkei_telecom.do*"
+      ],
+      "js": [
+        "shared/settings.js",
+        "content/rakuten-consent.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@t-kong",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

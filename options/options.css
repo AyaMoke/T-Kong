@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f1ec;
+  --ink: #1a2332;
+  --muted: #5c6570;
+  --card: #fffdf8;
+  --line: #d9d2c5;
+  --accent: #1a2332;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #e7eef6 0, transparent 40%),
+    linear-gradient(180deg, #f7f4ee, var(--bg));
+  min-height: 100vh;
+}
+
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.1rem 2.5rem;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.45rem;
+}
+
+.lead,
+.note,
+.status {
+  color: var(--muted);
+}
+
+.lead {
+  margin: 0 0 1.25rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1rem 0.35rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+label:first-of-type {
+  border-top: 0;
+}
+
+input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  margin: 0;
+}

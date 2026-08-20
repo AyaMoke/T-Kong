@@ -1,0 +1,9 @@
+#t-kong-button{
+position:fixed;right:16px;bottom:max(20px,env(safe-area-inset-bottom));z-index:2147483647;
+border:0;border-radius:999px;padding:12px 16px;font:700 14px/1.2 system-ui;color:#fff;background:#222;
+box-shadow:0 4px 18px rgba(0,0,0,.22)}
+#t-kong-button:active{transform:translateY(1px)}
+#t-kong-toast{
+position:fixed;left:50%;bottom:max(78px,calc(env(safe-area-inset-bottom) + 78px));transform:translateX(-50%);
+z-index:2147483647;max-width:min(90vw,520px);padding:10px 14px;border-radius:10px;
+background:rgba(20,20,20,.94);color:#fff;font:500 13px/1.4 system-ui;box-shadow:0 4px 18px rgba(0,0,0,.25)}

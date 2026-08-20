@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>T-Kong 設定</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>T-Kong</h1>
+      <p class="lead">動作のオン／オフを切り替えられます。すべて端末内のみで保存されます。</p>
+
+      <section>
+        <h2>自動化</h2>
+        <label>
+          <input type="checkbox" id="autoConsent" />
+          楽天の許諾画面で「同意する」を自動クリック
+        </label>
+        <label>
+          <input type="checkbox" id="autoOpenAfterConsent" />
+          同意後、保存記事があれば自動で検索・オープンを続行
+        </label>
+        <label>
+          <input type="checkbox" id="autoClickResult" />
+          検索結果の一致見出しを自動クリック
+        </label>
+        <label>
+          <input type="checkbox" id="showFloatingButton" />
+          テレコン画面に「保存記事を開く」ボタンを表示
+        </label>
+      </section>
+
+      <section>
+        <h2>タイトル処理</h2>
+        <label>
+          <input type="checkbox" id="preferHeadline" />
+          保存時はページ見出し（h1）を優先
+        </label>
+        <label>
+          <input type="checkbox" id="stripTitlePrefixes" />
+          「決算:」などの接頭辞と「日経新聞」末尾を除去
+        </label>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+      <p class="note">
+        非公式の補助拡張です。楽天証券の認証情報・Cookie・SSO・有料本文は扱いません。
+      </p>
+    </main>
+    <script src="../shared/settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
