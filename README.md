@@ -39,15 +39,73 @@ PC版 Firefox でも一部動作しますが、想定利用は Android です。
 
 ## インストール
 
-### 署名済みを使う（常用向け）
+### A. 署名済み `.xpi` をスマホへ入れる（常用）
 
-AMO で署名した `.xpi` を Firefox for Android に追加します。  
-（Self-distributed / Listed のどちらでも可）
+AMO（Self-distributed / Listed）で署名された **`.xpi`** を使います。  
+GitHub Release の `.zip` はソース用で、この手順には使いません。
 
-開発者向けのビルド:
+1. PCの AMO Developer Hub から署名済み `.xpi` をダウンロードする
+2. スマホへ移す（USB / Drive / 自分宛メールなど）
+3. スマホで **Firefox** を開く
+4. メニュー（⋮）→ **設定** → 一番下の **Firefox について**
+5. 画面の **Firefox ロゴを連続タップ**（5〜10回）  
+   「デバッグメニューを有効にしました」などと出たらOK
+6. 設定に戻ると **「ファイルからアドオンをインストール」** が出る  
+   （英語UI: *Install add-on from file*）
+7. それを開き、移した `.xpi` を選んで追加する
+8. 拡張機能一覧に **T-Kong** が出ていれば成功
+
+補足:
+
+- ファイルアプリの「共有」に Firefox が出なくても問題ありません（上記の手順を使います）
+- `.zip` のままでは追加できないことが多いです。必ず署名済み `.xpi` を使ってください
+- 別案: `.xpi` を HTTPS で置ける場所に置き、**スマホの Firefox でそのURLを開いて**ダウンロード／追加する
+
+### B. PCから一時的に入れる（開発・確認用）
+
+常用ではなく、開発中の動作確認向けです。Firefox を閉じると消えることがあります。
+
+#### B-1. Android 実機へ一時インストール（`web-ext`）
+
+前提:
+
+- PCに Node.js / `web-ext` / `adb`
+- スマホの USBデバッグ ON
+- スマホ Firefox の **USB経由のリモートデバッグ** ON
+- USB接続
 
 ```bash
 npm install --global web-ext
+cd /path/to/T-Kong
+adb devices
+web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
+```
+
+端末が複数ある場合:
+
+```bash
+web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox --android-device=<DEVICE_ID>
+```
+
+PC側の `about:debugging`（USBデバイス）は、一時拡張の読み込みボタンが無いことがあります。  
+Android への一時入れは **`web-ext run`** を使ってください。
+
+#### B-2. PCの Firefox だけで一時確認
+
+nikkei.com 側のボタン確認など、PCだけで見る場合:
+
+1. PCの Firefox で `about:debugging` を開く
+2. 左の **この Firefox**
+3. **一時的な拡張機能を読み込む**
+4. このリポジトリの `manifest.json` を選ぶ
+
+※ 楽天証券版テレコン（スマホ前提の導線）の確認には向きません。
+
+### 開発用のビルド（ローカル）
+
+```bash
+npm install --global web-ext
+web-ext lint
 web-ext build
 ```
 
@@ -67,15 +125,6 @@ git push origin v0.3.2
 ```
 
 AMO への提出・署名は当面手動です（CI から AMO API は呼びません）。
-
-### 開発用の一時実行
-
-```bash
-web-ext lint
-web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
-```
-
-USB デバッグと、Firefox 側の「USB経由のリモートデバッグ」が必要です。
 
 ## 設定
 
