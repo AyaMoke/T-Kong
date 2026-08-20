@@ -9,13 +9,15 @@
   <body>
     <main>
       <h1>T-Kong</h1>
-      <p class="lead">動作のオン／オフを切り替えられます。すべて端末内のみで保存されます。</p>
+      <p class="lead">動作のオン／オフを切り替えられます。記事情報はブラウザ内のローカルストレージのみに保存されます。</p>
 
       <section>
         <h2>自動化</h2>
         <label>
           <input type="checkbox" id="autoConsent" />
-          楽天の許諾画面で「同意する」を自動クリック
+          <span>
+            日経テレコンの利用許諾画面で「同意する」を自動的に選択します。利用許諾への同意を伴うため、内容を確認したうえで有効にしてください。
+          </span>
         </label>
         <label>
           <input type="checkbox" id="autoOpenAfterConsent" />
@@ -45,7 +47,7 @@
 
       <p id="status" class="status" aria-live="polite"></p>
       <p class="note">
-        非公式の補助拡張です。楽天証券の認証情報・Cookie・SSO・有料本文は扱いません。
+        非公式の補助拡張です。T-Kong独自サーバーへの送信はありません。楽天証券のID・パスワード、Cookie、SSO、有料本文は扱いません。対象サイトとの通常のHTTPS通信は発生します。
       </p>
     </main>
     <script src="../shared/settings.js"></script>

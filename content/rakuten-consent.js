@@ -3,10 +3,12 @@
 
   // 許諾画面の「同意する」だけを押す。認証情報・Cookie・SSOは扱わない。
   const TOAST_ID = "t-kong-toast";
-  const ARTICLE_KEY = "tKongPendingArticle";
-  const PHASE_KEY = "tKongPhase";
+  const {
+    PHASE_KEY,
+    getSettings,
+    getFreshPendingArticle,
+  } = TKongSettings;
   const PHASE_ASSIST = "assist";
-  const { getSettings } = TKongSettings;
 
   function showToast(message) {
     document.getElementById(TOAST_ID)?.remove();
@@ -44,8 +46,8 @@
 
   async function armAssistIfNeeded(settings) {
     if (settings.autoOpenAfterConsent === false) return;
-    const data = await browser.storage.local.get(ARTICLE_KEY);
-    if (!data[ARTICLE_KEY]?.title) return;
+    const article = await getFreshPendingArticle();
+    if (!article?.title) return;
     await browser.storage.local.set({ [PHASE_KEY]: PHASE_ASSIST });
   }
 

@@ -22,7 +22,7 @@
 
   function writeForm(settings) {
     for (const id of ids) {
-      document.getElementById(id).checked = settings[id] !== false;
+      document.getElementById(id).checked = Boolean(settings[id]);
     }
   }
 

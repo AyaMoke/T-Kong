@@ -3,8 +3,7 @@
 
   const BUTTON_ID = "t-kong-button";
   const TOAST_ID = "t-kong-toast";
-  const ARTICLE_KEY = "tKongPendingArticle";
-  const { getSettings, normalizeTitle } = TKongSettings;
+  const { ARTICLE_KEY, PHASE_KEY, getSettings, normalizeTitle } = TKongSettings;
 
   function getHeadlineText(settings) {
     const candidates = [
@@ -48,8 +47,9 @@
     if (!article) return showToast("記事IDを取得できませんでした");
     if (!article.title) return showToast("タイトルを取得できませんでした");
     await browser.storage.local.set({ [ARTICLE_KEY]: article });
+    await browser.storage.local.remove(PHASE_KEY);
     showToast(`保存しました: ${article.title}`);
-    console.info("[T-Kong] saved", article);
+    console.info("[T-Kong] saved", { articleId: article.articleId, title: article.title });
   }
 
   async function mountButton() {

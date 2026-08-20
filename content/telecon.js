@@ -3,12 +3,18 @@
 
   const TOAST_ID = "t-kong-toast";
   const BUTTON_ID = "t-kong-telecon-button";
-  const ARTICLE_KEY = "tKongPendingArticle";
-  const PHASE_KEY = "tKongPhase";
+  const {
+    ARTICLE_KEY,
+    PHASE_KEY,
+    getSettings,
+    normalizeTitle,
+    getFreshPendingArticle,
+  } = TKongSettings;
+
   const PHASE_SEARCH = "search";
   const PHASE_OPEN = "openResult";
   const PHASE_ASSIST = "assist";
-  const { getSettings, normalizeTitle } = TKongSettings;
+  const PHASE_OPENING = "opening";
 
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -32,6 +38,15 @@
       document.querySelector("#nwsKeyword") &&
         document.querySelector("#nwsSearchBtn")
     );
+  }
+
+  function isTeleconArticlePage() {
+    const href = location.href;
+    if (/LATCA014\.do/i.test(href)) return true;
+    if (href.includes("keyBody=") && !document.querySelector("ul.listNews")) {
+      return true;
+    }
+    return false;
   }
 
   function getResultLinks() {
@@ -76,6 +91,7 @@
     const target = option?.value || link?.getAttribute("href");
     if (!target) {
       showToast("「全ニュース」が見つかりませんでした");
+      console.info("[T-Kong] article remains pending");
       return false;
     }
 
@@ -111,11 +127,29 @@
     );
   }
 
+  async function completePendingIfOpened() {
+    const data = await browser.storage.local.get([ARTICLE_KEY, PHASE_KEY]);
+    const article = data[ARTICLE_KEY];
+    const phase = data[PHASE_KEY];
+    if (!article?.title || phase !== PHASE_OPENING) return false;
+    if (!isTeleconArticlePage()) return false;
+
+    const articleId = String(article.articleId || "");
+    if (articleId && !location.href.includes(articleId)) {
+      // 別記事の可能性はあるが、opening 後の本文画面なら完了扱い
+    }
+
+    await browser.storage.local.remove([ARTICLE_KEY, PHASE_KEY]);
+    console.info("[T-Kong] pending completed");
+    return true;
+  }
+
   async function openMatchingResult(article) {
     const settings = await getSettings();
     if (settings.autoClickResult === false) {
       showToast("検索まで完了しました（自動クリックはオフ）");
       await browser.storage.local.remove([PHASE_KEY]);
+      console.info("[T-Kong] article remains pending");
       return false;
     }
 
@@ -123,6 +157,7 @@
     if (!links.length) {
       showToast("検索結果が見つかりませんでした");
       await browser.storage.local.remove([PHASE_KEY]);
+      console.info("[T-Kong] article remains pending");
       return false;
     }
 
@@ -130,28 +165,40 @@
     if (!link) {
       showToast("一致する見出しをクリックできませんでした");
       await browser.storage.local.remove([PHASE_KEY]);
+      console.info("[T-Kong] article remains pending");
       return false;
     }
 
-    await browser.storage.local.remove([ARTICLE_KEY, PHASE_KEY]);
+    // クリック前には記事情報を消さない。遷移成功後に completed する。
+    await browser.storage.local.set({ [PHASE_KEY]: PHASE_OPENING });
     showToast(`開きます: ${link.textContent.trim()}`);
     console.info("[T-Kong] open result", {
       articleId: article.articleId,
-      href: link.href,
     });
-    link.click();
+    try {
+      link.click();
+    } catch (error) {
+      await browser.storage.local.set({ [PHASE_KEY]: PHASE_OPEN });
+      showToast("リンクのクリックに失敗しました。再試行できます");
+      console.info("[T-Kong] article remains pending");
+      return false;
+    }
     return true;
   }
 
   async function searchByTitle(article) {
     const input = document.querySelector("#nwsKeyword");
     const button = document.querySelector("#nwsSearchBtn");
-    if (!input || !button) return false;
+    if (!input || !button) {
+      console.info("[T-Kong] article remains pending");
+      return false;
+    }
 
     const settings = await getSettings();
     const title = normalizeTitle(article.title, settings);
     if (!title) {
       showToast("検索用タイトルを作れませんでした");
+      console.info("[T-Kong] article remains pending");
       return false;
     }
 
@@ -171,8 +218,8 @@
   }
 
   async function runAssist({ auto } = { auto: false }) {
-    const data = await browser.storage.local.get([ARTICLE_KEY, PHASE_KEY]);
-    const article = data[ARTICLE_KEY];
+    const article = await getFreshPendingArticle();
+    const data = await browser.storage.local.get(PHASE_KEY);
     const phase = data[PHASE_KEY];
 
     if (!article?.title) {
@@ -187,6 +234,7 @@
 
     if (!isNewsSearchPage()) {
       showToast("ニュースの見出し一覧（検索欄がある画面）を開いてください");
+      console.info("[T-Kong] article remains pending");
       return;
     }
 
@@ -195,7 +243,12 @@
       return;
     }
 
-    if (auto && phase !== PHASE_SEARCH && phase !== PHASE_OPEN && phase !== PHASE_ASSIST) {
+    if (
+      auto &&
+      phase !== PHASE_SEARCH &&
+      phase !== PHASE_OPEN &&
+      phase !== PHASE_ASSIST
+    ) {
       return;
     }
 
@@ -204,8 +257,8 @@
 
   async function mountButton() {
     const settings = await getSettings();
-    const data = await browser.storage.local.get(ARTICLE_KEY);
-    const hasPending = Boolean(data[ARTICLE_KEY]?.title);
+    const article = await getFreshPendingArticle();
+    const hasPending = Boolean(article?.title);
     const existing = document.getElementById(BUTTON_ID);
 
     if (!hasPending || settings.showFloatingButton === false) {
@@ -228,11 +281,17 @@
   async function continueAssistedFlow() {
     for (let i = 0; i < 24; i += 1) {
       const settings = await getSettings();
-      const data = await browser.storage.local.get([ARTICLE_KEY, PHASE_KEY]);
-      const article = data[ARTICLE_KEY];
+      const article = await getFreshPendingArticle();
+      const data = await browser.storage.local.get(PHASE_KEY);
       const phase = data[PHASE_KEY];
       if (!article?.title) return;
       if (!phase) return;
+
+      if (phase === PHASE_OPENING) {
+        if (await completePendingIfOpened()) return;
+        await sleep(500);
+        continue;
+      }
 
       if (phase === PHASE_ASSIST && settings.autoOpenAfterConsent === false) {
         return;
@@ -261,10 +320,16 @@
   }
 
   async function init() {
+    if (await completePendingIfOpened()) {
+      await mountButton();
+      return;
+    }
+
     await mountButton();
 
-    const data = await browser.storage.local.get([ARTICLE_KEY, PHASE_KEY]);
-    if (!data[ARTICLE_KEY]?.title) return;
+    const article = await getFreshPendingArticle();
+    const data = await browser.storage.local.get(PHASE_KEY);
+    if (!article?.title) return;
     if (!data[PHASE_KEY]) return;
 
     await continueAssistedFlow();
