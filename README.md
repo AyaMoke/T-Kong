@@ -3,6 +3,8 @@
 **非公式**の Firefox（Android向け）拡張です。  
 [日経電子版](https://www.nikkei.com/)で開いている記事の手がかりを端末内に保存し、[楽天証券版 日経テレコン](https://www.rakuten-sec.co.jp/)へ進んだあとの **同一記事探し** を補助します。
 
+サイト: [ayamoke.github.io/T-Kong](https://ayamoke.github.io/T-Kong/)
+
 > 日経・楽天証券の公式プロダクトではありません。  
 > すでに楽天証券版日経テレコンを **正規利用できる方** 向けの操作補助です。
 
