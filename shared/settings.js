@@ -13,6 +13,7 @@
     stripTitlePrefixes: true,
     preferHeadline: true,
     showFloatingButton: true,
+    openBrokerAppAfterSave: true,
   };
 
   const TITLE_PREFIXES =

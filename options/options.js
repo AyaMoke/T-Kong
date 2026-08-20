@@ -2,6 +2,7 @@
   "use strict";
 
   const ids = [
+    "openBrokerAppAfterSave",
     "autoConsent",
     "autoOpenAfterConsent",
     "autoClickResult",
