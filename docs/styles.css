@@ -53,10 +53,11 @@ footer {
   min-height: 100svh;
   display: grid;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.85rem 1.5rem;
   padding: clamp(1.5rem, 5vw, 3.5rem);
   max-width: 72rem;
   margin: 0 auto;
+  grid-template-columns: 1fr;
 }
 
 .hero-copy {
@@ -64,7 +65,7 @@ footer {
 }
 
 .brand {
-  margin: 0 0 1.1rem;
+  margin: 0;
   font-family: "Newsreader", serif;
   font-size: clamp(3.4rem, 12vw, 6.4rem);
   font-weight: 700;
@@ -76,7 +77,7 @@ footer {
 }
 
 .tagline {
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
   font-family: "Newsreader", serif;
   font-size: clamp(1.55rem, 4.4vw, 2.35rem);
   font-weight: 500;
@@ -102,7 +103,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.75rem;
+  margin-top: 0.35rem;
   opacity: 0;
   transform: translateY(18px);
   animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.46s forwards;
@@ -153,6 +154,10 @@ footer {
   opacity: 0;
   transform: translateY(28px) scale(0.98);
   animation: rise-soft 1.05s cubic-bezier(0.2, 0.8, 0.2, 1) 0.28s forwards;
+}
+
+.hero-visual picture {
+  display: block;
 }
 
 .hero-shot {
@@ -321,13 +326,45 @@ footer a:hover {
 @media (min-width: 860px) {
   .hero {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: 2.5rem;
+    grid-template-areas:
+      "brand visual"
+      "tagline visual"
+      "lead visual"
+      "actions visual";
+    column-gap: 2.5rem;
+    row-gap: 0.85rem;
+    align-items: center;
     padding-block: clamp(2rem, 6vw, 4rem);
   }
 
+  .brand {
+    grid-area: brand;
+    align-self: end;
+    margin-bottom: 0.25rem;
+  }
+
+  .tagline {
+    grid-area: tagline;
+    align-self: start;
+    margin: 0;
+  }
+
+  .lead {
+    grid-area: lead;
+    align-self: start;
+  }
+
+  .actions {
+    grid-area: actions;
+    align-self: start;
+    margin-top: 0.5rem;
+  }
+
   .hero-visual {
+    grid-area: visual;
     width: min(100%, 26rem);
     justify-self: end;
+    align-self: center;
   }
 
   .hero-shot {
@@ -368,10 +405,83 @@ footer a:hover {
 @media (max-width: 859px) {
   .hero {
     min-height: auto;
-    padding-top: 2.25rem;
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+    padding-bottom: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .brand {
+    font-size: clamp(2.6rem, 14vw, 3.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .tagline {
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+  }
+
+  .lead {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .actions {
+    margin-top: 0.15rem;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+    min-width: calc(50% - 0.4rem);
   }
 
   .hero-visual {
-    width: min(100%, 18.5rem);
+    width: min(100%, 15.5rem);
+    justify-self: center;
+    margin: 0.15rem 0 0.35rem;
+  }
+
+  /* 3ステップは横スワイプで短く見せる */
+  .flow {
+    padding-inline: 0;
+  }
+
+  .flow-title {
+    padding-inline: clamp(1.5rem, 5vw, 3.5rem);
+  }
+
+  .flow-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.15rem clamp(1.5rem, 5vw, 3.5rem) 0.75rem;
+    scrollbar-width: none;
+  }
+
+  .flow-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .flow-item {
+    flex: 0 0 min(72vw, 15.5rem);
+    scroll-snap-align: start;
+  }
+
+  .flow-item img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .flow-item figcaption {
+    font-size: 0.92rem;
+  }
+
+  .strip {
+    gap: 0;
+  }
+
+  .strip p {
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
   }
 }

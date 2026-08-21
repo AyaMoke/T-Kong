@@ -21,31 +21,36 @@
     <div class="grain" aria-hidden="true"></div>
 
     <header class="hero">
-      <div class="hero-copy">
-        <p class="brand">T-Kong</p>
-        <h1 class="tagline">電子版の記事から、<br />テレコンへつなぐ。</h1>
-        <p class="lead">
-          非公式の Firefox for Android 拡張。端末内だけにタイトルを保存し、楽天証券版日経テレコンでの同一記事探しを補助します。
-        </p>
-        <div class="actions">
-          <a
-            class="btn primary"
-            href="https://addons.mozilla.org/ja/firefox/addon/t-kong/"
-            >Firefox に追加</a
-          >
-          <a class="btn ghost" href="https://github.com/AyaMoke/T-Kong">GitHub</a>
-        </div>
+      <p class="brand">T-Kong</p>
+      <h1 class="tagline">電子版の記事から、<br />テレコンへつなぐ。</h1>
+      <div class="hero-visual">
+        <picture>
+          <source
+            media="(max-width: 859px)"
+            srcset="media/hero-mobile.webp"
+            type="image/webp"
+          />
+          <img
+            class="hero-shot"
+            src="media/hero.webp"
+            width="900"
+            height="1488"
+            alt="日経記事画面に「テレコンで読む」ボタンが表示されている様子"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <img
-          class="hero-shot"
-          src="media/hero.webp"
-          width="900"
-          height="1488"
-          alt=""
-          decoding="async"
-          fetchpriority="high"
-        />
+      <p class="lead">
+        非公式の Firefox for Android 拡張。端末内だけにタイトルを保存し、楽天証券版日経テレコンでの同一記事探しを補助します。
+      </p>
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="https://addons.mozilla.org/ja/firefox/addon/t-kong/"
+          >Firefox に追加</a
+        >
+        <a class="btn ghost" href="https://github.com/AyaMoke/T-Kong">GitHub</a>
       </div>
     </header>
 
