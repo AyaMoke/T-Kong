@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "T-Kong",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "日経記事タイトルを端末内に保存し、楽天証券版日経テレコンでの同一記事検索を補助する非公式拡張です。",
   "icons": {
     "48": "icons/icon-48.png",

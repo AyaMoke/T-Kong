@@ -1,0 +1,717 @@
+﻿Activity Resolver Table:
+  Schemes:
+      ispeed:
+        63579c4 jp.co.rakuten_sec.ispeed/.SplashActivity filter 112efe2
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.CATEGORY_LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "launch": -1
+        63579c4 jp.co.rakuten_sec.ispeed/.SplashActivity filter 4f32f73
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "stock": -1
+          Path: "PatternMatcher{LITERAL: /detail}"
+        63579c4 jp.co.rakuten_sec.ispeed/.SplashActivity filter 9f26e30
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "mynumber": -1
+          Path: "PatternMatcher{LITERAL: /register}"
+        63579c4 jp.co.rakuten_sec.ispeed/.SplashActivity filter 2ebbaa9
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "market": -1
+          Authority: "market": -1
+          Path: "PatternMatcher{LITERAL: /indices}"
+          Path: "PatternMatcher{LITERAL: /detail}"
+        8f4282e jp.co.rakuten_sec.ispeed/.InterstitialActivity filter 5c74fcf
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "ispeed"
+          Authority: "app": -1
+          Authority: "browser": -1
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 94cdbf4
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "us_stk": -1
+          Path: "PatternMatcher{PREFIX: /detail}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 3762f1d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order": -1
+          Path: "PatternMatcher{PREFIX: /us_stk/buy}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 91b1592
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order": -1
+          Path: "PatternMatcher{PREFIX: /us_mgn/new}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 206db63
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order_top": -1
+          Path: "PatternMatcher{PREFIX: /jp}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 555c360
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order_list": -1
+          Path: "PatternMatcher{PREFIX: /us_stk}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 34ba019
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order_list": -1
+          Path: "PatternMatcher{PREFIX: /us_mgn}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter e50f8de
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "ispeed"
+          Authority: "order_detail": -1
+          Path: "PatternMatcher{PREFIX: /us_stk}"
+      https:
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 79c5865
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /smartphone/market/info/pagecontent}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 39e993a
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{LITERAL: /web/market/}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter a1319eb
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /web/market/data/}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 2c9d348
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /web/market/search/quote.html}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter fff15e1
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /web/market/search/result.html}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 54d0f06
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /web/market/news/}"
+        9483d5c jp.co.rakuten_sec.ispeed/.AppIndexingActivity filter 10769c7
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "www.rakuten-sec.co.jp": -1
+          Path: "PatternMatcher{PREFIX: /web/market/ranking/}"
+      fido2-callback:
+        4e7c189 jp.co.rakuten_sec.ispeed/.PasskeyCallbackActivity filter c9b558e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "fido2-callback"
+          Authority: "complete": -1
+          AutoVerify=true
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        63579c4 jp.co.rakuten_sec.ispeed/.SplashActivity filter 176c0ad
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.appwidget.action.APPWIDGET_CONFIGURE:
+        e01cabf jp.co.rakuten_sec.ispeed/.widget.WidgetNewsConfActivity filter 143b58c
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        16d24d5 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChartConfActivity filter e6fc4ea
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        a9253db jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRateConfActivity filter c3c9e78
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        6e83951 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChartConfActivity filter 7fd45b6
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        2d852b7 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRateConfActivity filter fd92a24
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        626198d jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChartConfActivity filter a100742
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        a156353 jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRateConfActivity filter 490c490
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.BATTERY_OKAY:
+        3579ae4 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter dd69b4d
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.ACTION_POWER_DISCONNECTED:
+        6ca9876 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter ffb0e77
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+      jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter f5095a8
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter f8dc743
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter 5ec004a
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter db3626d
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter ba8a61c
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter e9fb587
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter 199b39e
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_UPDATE"
+      jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter 70be9cb
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter ebcc4f2
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter 851b1b5
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter 65c8a84
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter 8b8e38f
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter dac31c6
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter 72b8dd9
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_RESTART"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        5e82a68 jp.co.rakuten_sec.ispeed/androidx.profileinstaller.ProfileInstallReceiver filter 8168367
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      android.intent.action.DEVICE_STORAGE_LOW:
+        23fc602 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter b081b13
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      android.net.conn.CONNECTIVITY_CHANGE:
+        e658150 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter 27e9f49
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+      com.amazon.device.messaging.intent.REGISTRATION:
+        7efce4c jp.co.rakuten_sec.ispeed/.push.adm.ADMMessageHandler$MessageAlertReceiver filter cbe2e95
+          Action: "com.amazon.device.messaging.intent.REGISTRATION"
+          Action: "com.amazon.device.messaging.intent.RECEIVE"
+          Category: "jp.co.rakuten_sec.ispeed"
+      android.intent.action.DEVICE_STORAGE_OK:
+        23fc602 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter b081b13
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      com.rakuten.tech.mobile.analytics.rat.LocationBroadcastReceiver.PROCESS_UPDATES:
+        2718338 jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.analytics.geo.receiver.LocationBroadcastReceiver filter 5a01f11
+          Action: "com.rakuten.tech.mobile.analytics.rat.LocationBroadcastReceiver.PROCESS_UPDATES"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        5e82a68 jp.co.rakuten_sec.ispeed/androidx.profileinstaller.ProfileInstallReceiver filter 535ee81
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      com.google.android.c2dm.intent.RECEIVE:
+        b696baa jp.co.rakuten_sec.ispeed/com.google.firebase.iid.FirebaseInstanceIdReceiver filter a2cd39b
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+      android.intent.action.BATTERY_LOW:
+        3579ae4 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter dd69b4d
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.TIMEZONE_CHANGED:
+        fe8404e jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 3cf556f
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      android.intent.action.TIME_SET:
+        fe8404e jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 3cf556f
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        5e82a68 jp.co.rakuten_sec.ispeed/androidx.profileinstaller.ProfileInstallReceiver filter f680b26
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        5e82a68 jp.co.rakuten_sec.ispeed/androidx.profileinstaller.ProfileInstallReceiver filter 6498514
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter a01ed45
+          Action: "android.intent.action.BOOT_COMPLETED"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter 6ed6454
+          Action: "android.intent.action.BOOT_COMPLETED"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter a3b949f
+          Action: "android.intent.action.BOOT_COMPLETED"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter cf1d716
+          Action: "android.intent.action.BOOT_COMPLETED"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter 1b0b869
+          Action: "android.intent.action.BOOT_COMPLETED"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter 3a80808
+          Action: "android.intent.action.BOOT_COMPLETED"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter d382323
+          Action: "android.intent.action.BOOT_COMPLETED"
+        fe8404e jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 3cf556f
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      android.intent.action.USER_PRESENT:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter 17b3c9a
+          Action: "android.intent.action.USER_PRESENT"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter 49d7ffd
+          Action: "android.intent.action.USER_PRESENT"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter 4a0e9ec
+          Action: "android.intent.action.USER_PRESENT"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter 3857897
+          Action: "android.intent.action.USER_PRESENT"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter aa4b2ee
+          Action: "android.intent.action.USER_PRESENT"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter f2e0ba1
+          Action: "android.intent.action.USER_PRESENT"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter badd020
+          Action: "android.intent.action.USER_PRESENT"
+      android.intent.action.ACTION_POWER_CONNECTED:
+        6ca9876 jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter ffb0e77
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+      com.amazon.device.messaging.intent.RECEIVE:
+        7efce4c jp.co.rakuten_sec.ispeed/.push.adm.ADMMessageHandler$MessageAlertReceiver filter cbe2e95
+          Action: "com.amazon.device.messaging.intent.REGISTRATION"
+          Action: "com.amazon.device.messaging.intent.RECEIVE"
+          Category: "jp.co.rakuten_sec.ispeed"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter e599bc
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter bed57a7
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter 4e3e3e
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter b38b431
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter 259caf0
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter aea29ab
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter a29a452
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
+        28c135a jp.co.rakuten_sec.ispeed/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 525d98b
+          Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      androidx.work.impl.background.systemalarm.UpdateProxies:
+        e29627c jp.co.rakuten_sec.ispeed/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter b88e705
+          Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
+      jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL:
+        c08e1af jp.co.rakuten_sec.ispeed/.widget.WidgetNews filter ad918c1
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        a408866 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketChart filter 2e671c0
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        d471ef9 jp.co.rakuten_sec.ispeed/.widget.WidgetMarketRate filter cedbbb
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        ca8b8d8 jp.co.rakuten_sec.ispeed/.widget.WidgetStockChart filter aac4ea2
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        e9f0733 jp.co.rakuten_sec.ispeed/.widget.WidgetStockRate filter f137225
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        5ad0ffa jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteChart filter b99cb4
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+        3fec0dd jp.co.rakuten_sec.ispeed/.widget.WidgetFavoriteRate filter d5fce7f
+          Action: "jp.co.rakuten_sec.ispeed.widget.BaseWidgetProvider.WIDGET_CANCEL"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.google.firebase.MESSAGING_EVENT:
+        551f1bd jp.co.rakuten_sec.ispeed/.service.FCMMessagingService filter b9b3b2
+          Action: "com.google.firebase.MESSAGING_EVENT"
+        17def03 jp.co.rakuten_sec.ispeed/com.google.firebase.messaging.FirebaseMessagingService filter c3de80
+          Action: "com.google.firebase.MESSAGING_EVENT"
+          mPriority=-500, mOrder=0, mHasStaticPartialTypes=false, mHasDynamicPartialTypes=false
+
+Domain verification status:
+    User all:
+      Verification link handling allowed: true
+      Selection state:
+        Disabled:
+          www.rakuten-sec.co.jp
+
+Permissions:
+  Permission [jp.co.rakuten_sec.ispeed.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (2ac2142):
+    sourcePackage=jp.co.rakuten_sec.ispeed
+    uid=10314 gids=[] type=0 prot=signature
+    perm=PermissionInfo{c4b9628 jp.co.rakuten_sec.ispeed.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Permissions:
+  Permission [jp.co.rakuten_sec.ispeed.permission.RECEIVE_ADM_MESSAGE] (787553):
+    sourcePackage=jp.co.rakuten_sec.ispeed
+    uid=10314 gids=[] type=0 prot=signature
+    perm=PermissionInfo{c80bce6 jp.co.rakuten_sec.ispeed.permission.RECEIVE_ADM_MESSAGE}
+    flags=0x0
+
+Registered ContentProviders:
+  jp.co.rakuten_sec.ispeed/com.google.firebase.provider.FirebaseInitProvider:
+    Provider{c42b227 jp.co.rakuten_sec.ispeed/com.google.firebase.provider.FirebaseInitProvider}
+  jp.co.rakuten_sec.ispeed/androidx.startup.InitializationProvider:
+    Provider{bd7ecd4 jp.co.rakuten_sec.ispeed/androidx.startup.InitializationProvider}
+  jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.sdkutils.SdkUtilsInitProvider:
+    Provider{5109e7d jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.sdkutils.SdkUtilsInitProvider}
+  jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.analytics.AnalyticsInitContentProvider:
+    Provider{a0bc172 jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.analytics.AnalyticsInitContentProvider}
+
+ContentProvider Authorities:
+  [jp.co.rakuten_sec.ispeed.SdkUtilsInitProvider]:
+    Provider{5109e7d jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.sdkutils.SdkUtilsInitProvider}
+      applicationInfo=ApplicationInfo{83b6e90 jp.co.rakuten_sec.ispeed}
+  [jp.co.rakuten_sec.ispeed.firebaseinitprovider]:
+    Provider{c42b227 jp.co.rakuten_sec.ispeed/com.google.firebase.provider.FirebaseInitProvider}
+      applicationInfo=ApplicationInfo{5e2389 jp.co.rakuten_sec.ispeed}
+  [jp.co.rakuten_sec.ispeed.androidx-startup]:
+    Provider{bd7ecd4 jp.co.rakuten_sec.ispeed/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{bdf0f8e jp.co.rakuten_sec.ispeed}
+  [jp.co.rakuten_sec.ispeed.AnalyticsInitContentProvider]:
+    Provider{a0bc172 jp.co.rakuten_sec.ispeed/com.rakuten.tech.mobile.analytics.AnalyticsInitContentProvider}
+      applicationInfo=ApplicationInfo{a8b13af jp.co.rakuten_sec.ispeed}
+
+Key Set Manager:
+  [jp.co.rakuten_sec.ispeed]
+      Signing KeySets: 134
+
+Packages:
+  Package [jp.co.rakuten_sec.ispeed] (f91bf1f):
+    appId=10314
+    pccId=-1
+    pkg=Package{a44026c jp.co.rakuten_sec.ispeed}
+    codePath=/data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==
+    resourcePath=/data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==
+    legacyNativeLibraryDir=/data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=235 minSdk=26 targetSdk=36
+    minExtensionVersions=[]
+    versionName=11.7.0
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base, config.arm64_v8a, config.ja, config.xxhdpi]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_UNRESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    pageSizeCompat=0
+    queriesPackages=[com.google.android.youtube, jp.co.rakuten_bank.rakutenbank, jp.co.rakuten.kc.rakutencardapp.android, jp.co.rakuten.android, jp.edy.edyapp, jp.co.rakuten.pay, jp.co.rakuten.pointpartner.app, jp.co.rakuten.pointclub.android, jp.co.rakuten.travel.andro, jp.co.rakuten.broadband.sim, jp.co.fablic.fril, com.viber.voip, jp.co.rakuten.golf.gora2]
+    queriesIntents=[Intent { act=android.support.customtabs.action.CustomTabsService }]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      org.apache.http.legacy
+    usesLibraryFiles:
+      /system/framework/org.apache.http.legacy.jar
+    timeStamp=2026-08-04 21:57:47
+    lastUpdateTime=2026-08-04 21:57:49
+    installerPackageName=com.android.vending
+    installerPackageUid=10195
+    initiatingPackageName=com.android.vending
+    originatingPackageName=null
+    updateOwnerPackageName=com.android.vending
+    packageSource=0
+    appMetadataFilePath=/data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==/app.metadata
+    appMetadataSource=2
+    signatures=PackageSignatures{33a2035 version:3, signatures:[38b4c986], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_UNRESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      jp.co.rakuten_sec.ispeed.permission.RECEIVE_ADM_MESSAGE: prot=signature
+      jp.co.rakuten_sec.ispeed.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+      android.permission.POST_NOTIFICATIONS
+      com.google.android.c2dm.permission.RECEIVE
+      android.permission.ACCESS_LOCAL_NETWORK
+      android.permission.FOREGROUND_SERVICE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.GET_TASKS
+      android.permission.INTERNET
+      jp.co.rakuten_sec.ispeed.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      com.amazon.device.messaging.permission.RECEIVE
+      jp.co.rakuten_sec.ispeed.permission.RECEIVE_ADM_MESSAGE
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.DISABLE_KEYGUARD
+      android.permission.CAMERA
+      android.permission.USE_FINGERPRINT
+      android.permission.SCHEDULE_EXACT_ALARM
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.VIBRATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.USE_BIOMETRIC
+      android.permission.WAKE_LOCK
+    install permissions:
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      jp.co.rakuten_sec.ispeed.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      jp.co.rakuten_sec.ispeed.permission.RECEIVE_ADM_MESSAGE: granted=true
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.USE_BIOMETRIC: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=45270 deDataInode=45165 pccCeDataInode=0 pccDeDataInode=0 installed=true hidden=false suspended=false appLockEnabled=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=2
+      dataDir=/data/user/0/jp.co.rakuten_sec.ispeed
+      firstInstallTime=2026-01-22 12:25:08
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-QOAN.frro
+        /data/resource-cache/com.android.systemui-accent-iPce.frro
+        /data/resource-cache/com.android.systemui-dynamic-7Gmy.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      lastDisabledCaller: com.android.vending
+      gids=[3003]
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=true, flags=[ USER_SET|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.ACCESS_LOCAL_NETWORK: granted=true, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.CAMERA: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+      enabledComponents:
+        androidx.work.impl.background.systemjob.SystemJobService
+    User 10: ceDataInode=0 deDataInode=0 pccCeDataInode=0 pccDeDataInode=0 installed=false hidden=false suspended=false appLockEnabled=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=null
+      firstInstallTime=1970-01-01 09:00:00
+      uninstallReason=0
+      overlay paths:
+        /data/resource-cache/com.android.systemui-neutral-QOAN.frro
+        /data/resource-cache/com.android.systemui-accent-iPce.frro
+        /data/resource-cache/com.android.systemui-dynamic-7Gmy.frro
+      gids=[3003]
+      runtime permissions:
+        android.permission.ACCESS_LOCAL_NETWORK: granted=true, flags=[ REVOKE_WHEN_REQUESTED]
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ RESTRICTION_UPGRADE_EXEMPT]
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+    jp.co.rakuten.slide:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten_sec.ispeed:
+      com.google.android.youtube
+      jp.co.rakuten.android
+      jp.co.rakuten.pointclub.android
+      jp.co.rakuten.pay
+      jp.co.rakuten_bank.rakutenbank
+      jp.co.rakuten.kc.rakutencardapp.android
+      jp.co.rakuten.travel.andro
+      jp.co.fablic.fril
+      com.viber.voip
+      jp.co.rakuten.pointpartner.app
+    com.twitter.android:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakutensec.shisankeisei:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten.pay:
+      jp.co.rakuten_sec.ispeed
+    jp.co.yahoo.android.finance:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten.pointpartner.app:
+      jp.co.rakuten_sec.ispeed
+  queries via component:
+    com.google.android.apps.diagnosticstool:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.apps.camera.services:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.settings.intelligence:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.apps.pixel.subzero:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.apps.messaging:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.as:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.as.oss:
+      jp.co.rakuten_sec.ispeed
+    com.ss.android.ugc.trill:
+      jp.co.rakuten_sec.ispeed
+    com.facebook.katana:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten.slide:
+      jp.co.rakuten_sec.ispeed
+    com.instagram.android:
+      jp.co.rakuten_sec.ispeed
+    com.amazon.mShop.android.shopping:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten_sec.ispeed:
+      com.android.chrome
+      org.mozilla.firefox
+      com.microsoft.emmx
+    com.kouzoh.mercari:
+      jp.co.rakuten_sec.ispeed
+    com.kakaku.tabelog:
+      jp.co.rakuten_sec.ispeed
+    jp.naver.line.android:
+      jp.co.rakuten_sec.ispeed
+    com.sony.tvsideview.phone:
+      jp.co.rakuten_sec.ispeed
+    jp.co.mcdonalds.android:
+      jp.co.rakuten_sec.ispeed
+    com.facebook.orca:
+      jp.co.rakuten_sec.ispeed
+    com.smbc_card.vpass:
+      jp.co.rakuten_sec.ispeed
+    net.carsensor.cssroid:
+      jp.co.rakuten_sec.ispeed
+    jp.co.yahoo.android.ymail:
+      jp.co.rakuten_sec.ispeed
+    com.adobe.reader:
+      jp.co.rakuten_sec.ispeed
+    jp.co.rakuten.pay:
+      jp.co.rakuten_sec.ispeed
+    com.sony.songpal.mdr:
+      jp.co.rakuten_sec.ispeed
+    com.adidas.app:
+      jp.co.rakuten_sec.ispeed
+    jp.dreambrain.adiorama:
+      jp.co.rakuten_sec.ispeed
+    com.iherb:
+      jp.co.rakuten_sec.ispeed
+    jp.co.yahoo.android.yjtop:
+      jp.co.rakuten_sec.ispeed
+    jp.co.pia.ticketpia:
+      jp.co.rakuten_sec.ispeed
+    jp.co.ccc.Tsite:
+      jp.co.rakuten_sec.ispeed
+    jp.co.yahoo.android.apps.transit:
+      jp.co.rakuten_sec.ispeed
+    com.expressvpn.vpn:
+      jp.co.rakuten_sec.ispeed
+    com.adidas.confirmed.app:
+      jp.co.rakuten_sec.ispeed
+    com.fitbit.FitbitMobile:
+      jp.co.rakuten_sec.ispeed
+    com.google.android.apps.pixel.aurelius:
+      jp.co.rakuten_sec.ispeed
+    com.snkrdunk.android:
+      jp.co.rakuten_sec.ispeed
+    jp.co.mapple.cotripofficial:
+      jp.co.rakuten_sec.ispeed
+    jp.paddleinc.walk:
+      jp.co.rakuten_sec.ispeed
+    com.amazon.kindle:
+      jp.co.rakuten_sec.ispeed
+    com.amazon.dee.app:
+      jp.co.rakuten_sec.ispeed
+    com.nttdocomo.android.dpoint:
+      jp.co.rakuten_sec.ispeed
+    jp.ponta.myponta:
+      jp.co.rakuten_sec.ispeed
+    com.zing.zalo:
+      jp.co.rakuten_sec.ispeed
+    org.iibc.global.toeic.officialapp:
+      jp.co.rakuten_sec.ispeed
+    com.airbnb.android:
+      jp.co.rakuten_sec.ispeed
+    jp.kakao.piccoma:
+      jp.co.rakuten_sec.ispeed
+    us.zoom.videomeetings:
+      jp.co.rakuten_sec.ispeed
+    com.facebook.work:
+      jp.co.rakuten_sec.ispeed
+    com.vkontakte.android:
+      jp.co.rakuten_sec.ispeed
+    com.sansan:
+      jp.co.rakuten_sec.ispeed
+    jp.co.yahoo.android.weather.type1:
+      jp.co.rakuten_sec.ispeed
+    jp.co.jal.dom:
+      jp.co.rakuten_sec.ispeed
+    com.mantra.langaku.langaku_flutter.prod:
+      jp.co.rakuten_sec.ispeed
+    net.polyglots:
+      jp.co.rakuten_sec.ispeed
+    com.scotchgrain_app:
+      jp.co.rakuten_sec.ispeed
+    us.ana_pocket.ANAPocket:
+      jp.co.rakuten_sec.ispeed
+    com.grabtaxi.passenger:
+      jp.co.rakuten_sec.ispeed
+    jp.studyplus.android.app:
+      jp.co.rakuten_sec.ispeed
+    com.jalglobalwallet.jgw:
+      jp.co.rakuten_sec.ispeed
+    co.spoonme:
+      jp.co.rakuten_sec.ispeed
+    com.quizizz_mobile:
+      jp.co.rakuten_sec.ispeed
+    jp.co.sony.minchalle:
+      jp.co.rakuten_sec.ispeed
+    jp.eplus.android.all.app:
+      jp.co.rakuten_sec.ispeed
+    com.eup.mytest:
+      jp.co.rakuten_sec.ispeed
+    com.bereal.ft:
+      jp.co.rakuten_sec.ispeed
+    com.lemon.lvoverseas:
+      jp.co.rakuten_sec.ispeed
+    com.flightradar24free:
+      jp.co.rakuten_sec.ispeed
+    com.snapchat.android:
+      jp.co.rakuten_sec.ispeed
+    com.oceanwing.soundcore:
+      jp.co.rakuten_sec.ispeed
+    com.minding.myroutine:
+      jp.co.rakuten_sec.ispeed
+    droom.sleepIfUCan:
+      jp.co.rakuten_sec.ispeed
+  queryable via interaction:
+    User 0:
+      [com.google.android.repairmode,com.android.localtransport,com.android.settings,com.google.android.satellite,com.android.DeviceAsWebcam,com.android.location.fused,com.android.dynsystem,com.google.android.iwlan,com.google.android.settings.future.biometrics.faceenroll,com.google.SSRestartDetector,com.android.providers.settings,com.android.inputdevices,android,com.android.keychain,com.android.qns,com.android.server.telecom,com.google.pixel.camera.services]:
+        jp.co.rakuten_sec.ispeed
+      com.google.android.gms:
+        jp.co.rakuten_sec.ispeed
+      com.google.android.inputmethod.latin:
+        jp.co.rakuten_sec.ispeed
+      com.android.chrome:
+        jp.co.rakuten_sec.ispeed
+      com.google.android.webview:
+        jp.co.rakuten_sec.ispeed
+      jp.co.rakuten_sec.ispeed:
+        com.google.android.webview
+    User 10:
+  queryable via uses-library:
+
+Dexopt state:
+  [jp.co.rakuten_sec.ispeed]
+    path: /data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==/base.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/app/~~94wFAWtCZ5_2vIjNK6MrCg==/jp.co.rakuten_sec.ispeed-eh8ONc5RukhR6jgL32gu-w==/oat/arm64/base.odex]

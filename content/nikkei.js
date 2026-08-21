@@ -6,12 +6,14 @@
   const TOAST_ID = "t-kong-toast";
   const { ARTICLE_KEY, PHASE_KEY, getSettings, normalizeTitle } = TKongSettings;
 
-  // 楽天証券 iSPEED。認証は行わず、アプリストア起動のみを試みる。
+  // 楽天証券 iSPEED。認証はせず起動のみ。
+  // package だけの intent:// はインストール済みでも Play ストアに落ちやすいので、
+  // 実機で確認済みの ispeed://launch を使う。
   const BROKER_PACKAGE = "jp.co.rakuten_sec.ispeed";
   const BROKER_PLAY_URL =
     "https://play.google.com/store/apps/details?id=" + BROKER_PACKAGE;
   const BROKER_INTENT =
-    "intent://#Intent;package=" +
+    "intent://launch#Intent;scheme=ispeed;package=" +
     BROKER_PACKAGE +
     ";S.browser_fallback_url=" +
     encodeURIComponent(BROKER_PLAY_URL) +
@@ -83,7 +85,9 @@
     );
     button.addEventListener("click", () => {
       tryOpenBrokerApp();
-      showToast("アプリが開かない場合は、手動で楽天証券アプリ→日経テレコンへ");
+      showToast(
+        "開かない場合は手動: iSPEED → メニュー → マーケット → 日経テレコン"
+      );
     });
     document.documentElement.appendChild(button);
     setTimeout(() => button.remove(), 12000);

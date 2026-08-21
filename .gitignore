@@ -1,3 +1,5 @@
+docs/_apk_tmp/
+docs/*.apk
 web-ext-artifacts/
 node_modules/
 .DS_Store
