@@ -3,7 +3,8 @@
 **非公式**の Firefox（Android向け）拡張です。  
 [日経電子版](https://www.nikkei.com/)で開いている記事の手がかりを端末内に保存し、[楽天証券版 日経テレコン](https://www.rakuten-sec.co.jp/)へ進んだあとの **同一記事探し** を補助します。
 
-サイト: [ayamoke.github.io/T-Kong](https://ayamoke.github.io/T-Kong/)
+サイト: [ayamoke.github.io/T-Kong](https://ayamoke.github.io/T-Kong/)  
+インストール: [Firefox Add-ons（AMO）](https://addons.mozilla.org/ja/firefox/addon/t-kong/)
 
 > 日経・楽天証券の公式プロダクトではありません。  
 > すでに楽天証券版日経テレコンを **正規利用できる方** 向けの操作補助です。
@@ -61,12 +62,17 @@ Discover から開くと、デフォルトブラウザ設定とは別に Google 
 
 ## インストール
 
-### A. 署名済み `.xpi` をスマホへ入れる（常用）
+### A. Firefox Add-ons（おすすめ）
 
-AMO（Self-distributed / Listed）で署名された **`.xpi`** を使います。  
+1. スマホの Firefox で [T-Kong（AMO）](https://addons.mozilla.org/ja/firefox/addon/t-kong/) を開く
+2. **Firefox へ追加** をタップしてインストールする
+
+### A-2. 署名済み `.xpi` をファイルから入れる（代替）
+
+AMO のページから入れない場合や、署名済み `.xpi` を手元に持っている場合向けです。  
 GitHub Release の `.zip` はソース用で、この手順には使いません。
 
-1. PCの AMO Developer Hub から署名済み `.xpi` をダウンロードする
+1. AMO / Developer Hub から署名済み `.xpi` を入手する
 2. スマホへ移す（USB / Drive / 自分宛メールなど）
 3. スマホで **Firefox** を開く
 4. メニュー（⋮）→ **設定** → 一番下の **Firefox について**

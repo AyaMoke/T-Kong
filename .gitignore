@@ -1,4 +1,7 @@
 docs/_apk_tmp/
+docs/_frames/
+docs/media/_raw_*
+docs/media/probe_*
 docs/*.apk
 web-ext-artifacts/
 node_modules/

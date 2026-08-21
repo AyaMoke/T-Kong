@@ -21,19 +21,90 @@
     <div class="grain" aria-hidden="true"></div>
 
     <header class="hero">
-      <p class="brand">T-Kong</p>
-      <h1 class="tagline">電子版の記事から、<br />テレコンへつなぐ。</h1>
-      <p class="lead">
-        非公式の Firefox for Android 拡張。端末内だけにタイトルを保存し、楽天証券版日経テレコンでの同一記事探しを補助します。
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="https://github.com/AyaMoke/T-Kong">GitHub</a>
-        <a class="btn ghost" href="https://github.com/AyaMoke/T-Kong#インストール">インストール</a>
+      <div class="hero-copy">
+        <p class="brand">T-Kong</p>
+        <h1 class="tagline">電子版の記事から、<br />テレコンへつなぐ。</h1>
+        <p class="lead">
+          非公式の Firefox for Android 拡張。端末内だけにタイトルを保存し、楽天証券版日経テレコンでの同一記事探しを補助します。
+        </p>
+        <div class="actions">
+          <a
+            class="btn primary"
+            href="https://addons.mozilla.org/ja/firefox/addon/t-kong/"
+            >Firefox に追加</a
+          >
+          <a class="btn ghost" href="https://github.com/AyaMoke/T-Kong">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img
+          class="hero-shot"
+          src="media/hero.webp"
+          width="900"
+          height="1488"
+          alt=""
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </header>
 
+    <section class="flow" aria-label="使い方の流れ">
+      <h2 class="flow-title">3ステップ</h2>
+      <ol class="flow-list">
+        <li class="flow-item">
+          <figure>
+            <img
+              src="media/step-1.webp"
+              width="720"
+              height="1190"
+              alt="日経電子版の記事に「テレコンで読む」ボタンが表示された画面"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <strong>1. 保存</strong>
+              nikkei.com で「テレコンで読む」
+            </figcaption>
+          </figure>
+        </li>
+        <li class="flow-item">
+          <figure>
+            <img
+              src="media/step-2.webp"
+              width="720"
+              height="980"
+              alt="iSPEEDのメニュー内マーケットにある日経テレコンボタン"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <strong>2. テレコンへ</strong>
+              メニュー → マーケット → 日経テレコン
+            </figcaption>
+          </figure>
+        </li>
+        <li class="flow-item">
+          <figure>
+            <img
+              src="media/step-3.webp"
+              width="720"
+              height="1190"
+              alt="日経テレコンで同一記事の本文が表示された画面"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <strong>3. 本文</strong>
+              保存タイトルで検索・オープンを補助
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
     <section class="strip" aria-label="要点">
-      <p><strong>保存</strong> nikkei.com でワンタップ</p>
+      <p><strong>保存</strong> 端末内だけにタイトルを保持</p>
       <p><strong>補助</strong> 許諾・検索・見出しオープン</p>
       <p><strong>方針</strong> 認証情報は扱わない</p>
     </section>
@@ -46,6 +117,7 @@
     </section>
 
     <footer>
+      <a href="https://addons.mozilla.org/ja/firefox/addon/t-kong/">AMO</a>
       <a href="https://github.com/AyaMoke/T-Kong">AyaMoke/T-Kong</a>
       <span>MIT License</span>
     </footer>
